@@ -48,8 +48,27 @@
     </section>
   </main>
 
+  <button id="backToTop" title="Наверх"></button>
+
   <footer>
     <p>© 2025 Студенческий Совет ИРГЯИГТ. Все права защищены.</p>
   </footer>
+  
+  <script>
+    const btn = document.getElementById("backToTop");
+  
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  
+    btn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+  
 </body>
 </html>
