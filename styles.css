@@ -5,6 +5,20 @@ body {
   color: #333;
 }
 
+#home {
+  background-image: url("http://post-images.org/photo-page.php?photo=CTloWPsw");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 header {
   background-color: #0055a5;
   color: white;
