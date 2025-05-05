@@ -1,3 +1,8 @@
+* {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,25 +10,20 @@ body {
   color: #333;
 }
 
-#home {
-  background-image: url("http://post-images.org/photo-page.php?photo=CTloWPsw");
+.home {
+  background-image: url("https://i.postimg.cc/8PfXfx0b/image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
-  min-height: 400px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-header {
-  background-color: #0055a5;
-  color: white;
-  padding: 1em;
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 nav ul {
@@ -54,21 +54,32 @@ section {
   min-height: 300px;
 }
 
-#about {
-  background-image: url("images/about-bg.jpg");
+#about,
+#members,
+#goals,
+#contacts,
+#stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
-#members {
-  background-image: url("images/members-bg.jpg");
+#about img,
+#members img,
+#goals img,
+#contacts img,
+#stats img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-#goals {
-  background-image: url("images/goals-bg.jpg");
-}
-
-#contacts {
-  background-image: url("images/contacts-bg.jpg");
-}
 
 footer {
   text-align: center;
@@ -96,4 +107,120 @@ footer {
 
 #backToTop:hover img {
   transform: scale(1.1);
+}
+
+nav li {
+  position: relative;
+}
+
+.button-about,
+.button-members,
+.button-goals,
+.button-contacts,
+.button-stats
+ {
+  position: fixed;
+  width: 7vw;
+  height: 5vh;
+  background-color: rgb(250, 0, 0);
+  border: none;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.back-home {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(250, 0, 0);
+  opacity: 1;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.back-home img {
+  width: 30px;
+  height: auto;
+}
+
+.button-about {
+  top: 4vh;
+  left: 26vw;
+}
+
+.button-members {
+  top: 4vh;
+  left: 34vw;
+}
+
+.button-goals {
+  top: 4vh;
+  left: 43.5vw;
+}
+
+.button-contacts {
+  top: 4vh;
+  left: 64vw;
+}
+
+.button-stats {
+  top: 4vh;
+  left: 54vw;
+}
+
+button {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(250, 0, 0);
+  border: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.button-1 {
+  top: 15px;
+  left: 160px;
+}
+
+.button-2 {
+  top: 15px;
+  left: 680px;
+}
+
+.button-3 {
+  top: 15px;
+  left: 1190px;
+}
+
+.button-1-1 {
+  top: 0vh;
+  left: 74.5vw;
+  width: 4vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 10;
+}
+
+.button-2-1 {
+  top: 0vh;
+  left: 79.3vw;
+  width: 4vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 10;
+}
+
+.button-3-1 {
+  top: 0vh;
+  left: 84vw;
+  width: 4vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 10;
 }

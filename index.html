@@ -6,53 +6,43 @@
   <title>Студенческий Совет</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+<div class="home"></div>
+<body class="no-scroll">
+</body>
 <body>
   <header>
-    <h1>Студенческий Совет</h1>
     <nav>
       <ul>
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#members">Участники</a></li>
-        <li><a href="#goals">Цели</a></li>
-        <li><a href="#contacts">Контакты</a></li>
+        <li>
+          <a href="about.html" target="_blank"></a>
+          <button onclick="window.open('about.html', '_blank')" class="button-about"></button>
+        </li>
+        <li>
+          <a href="members.html" target="_blank"></a>
+          <button onclick="window.open('members.html', '_blank')" class="button-members"></button>
+        </li>
+        <li>
+          <a href="goals.html" target="_blank"></a>
+          <button onclick="window.open('goals.html', '_blank')" class="button-goals"></button>
+        </li>
+        <li>
+          <a href="stats.html" target="_blank"></a>
+          <button onclick="window.open('stats.html', '_blank')" class="button-stats"></button>
+        </li>
+        <li>
+          <a href="contacts.html" target="_blank"></a>
+          <button onclick="window.open('contacts.html', '_blank')" class="button-contacts"></button>
+        </li>
       </ul>
     </nav>
+
+    <button class="button-1-1" onclick="window.location.href='';"></button>
+    <button class="button-2-1" onclick="window.location.href='';"></button>
+    <button class="button-3-1" onclick="window.location.href='';"></button>
+    
   </header>
 
-  <main>
-    <section id="about">
-      <h2>О нас</h2>
-      <p>Мы — студенческий совет университета. Представляем интересы студентов, организуем мероприятия и продвигаем студенческие инициативы.</p>
-    </section>
-
-    <section id="members">
-      <h2>Участники</h2>
-      <ul>
-        <li> — Председатель</li>
-      </ul>
-    </section>
-
-    <section id="goals">
-      <h2>Цели</h2>
-      <ul>
-        <li>Защита прав студентов</li>
-        <li>Развитие студенческого самоуправления</li>
-        <li>Проведение культурных и образовательных мероприятий</li>
-        <li>Сотрудничество с администрацией в интересах студентов</li>
-      </ul>
-    </section>
-
-    <section id="contacts">
-      <h2>Контакты</h2>
-      <p>Email: </p>
-    </section>
-  </main>
-
   <button id="backToTop" title="Наверх"></button>
-
-  <footer>
-    <p>© 2025 Студенческий Совет ИРГЯИГТ. Все права защищены.</p>
-  </footer>
   
   <script>
     const btn = document.getElementById("backToTop");
