@@ -141,7 +141,7 @@ html, body {
 .video-container {
   width: 30%;
   margin: 0 auto;
-  padding-top: 320px;
+  padding-top: 330px;
   z-index: 1;
   margin-left: 20%;
 }
@@ -160,14 +160,14 @@ html, body {
   width: 100vw;
   position: relative;
   z-index: 1;
-  overflow-y: auto;  /* Разрешаем прокрутку */
-  max-height: 100vh;  /* Ограничиваем высоту блока */
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 .goals img {
-  width: 100%; /* Изображение будет на всю ширину */
-  height: auto; /* Автоматическая высота */
-  max-height: none; /* Убираем ограничение по высоте для изображений */
+  width: 100%;
+  height: auto;
+  max-height: none;
   object-fit: cover; 
 }
 
@@ -178,8 +178,8 @@ html, body {
   width: 100vw;
   position: relative;
   z-index: 1;
-  overflow-y: auto;     /* Разрешаем прокрутку */
-  max-height: 100vh;     /* Ограничиваем высоту блока */
+  overflow-y: auto;
+  max-height: 100vh;
   background-image: url("images/stats.webp");
   background-size: cover;
   background-position: center;
@@ -263,7 +263,7 @@ nav li {
   top: 4.5vh;
   background-color: rgb(250, 0, 0);
   border: none;
-  opacity: 0;
+  opacity: 0.5;
   cursor: pointer;
   z-index: 10;
   height: 5vh;
