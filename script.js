@@ -6,6 +6,6 @@ function isMobile() {
     if (isMobile()) {
       document.getElementById('intro').style.display = 'block';
     } else {
-      window.location.href = "index.html";
+      window.location.href = "intro.html";
     }
   });  
