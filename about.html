@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <button class="back-home" onclick="location.href='index.html'">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Circle_arrow_up_font_awesome.svg/1024px-Circle_arrow_up_font_awesome.svg.png?20130126203447" alt="На главную" />
-          </button>
-          <div class="about">
-          </div>
-    </body>
-    </html>    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Картинки</title>
+</head>
+<body>
+  <button class="back-home" onclick="location.href='index.html'">
+    <img src="images/back.webp" alt="На главную" />
+  </button>
+  <div class="about">
+    <!-- Контейнер для видео, который теперь будет прокручиваться с остальной страницей -->
+    <div class="video-container">
+      <video controls autoplay>
+        <source src="videos/STUD.mp4" type="video/mp4">
+        Ваш браузер не поддерживает тег video.
+      </video>
+    </div>
+
+    <!-- Основная картинка на фоне -->
+    <img src="images/about.webp" alt="О нас" />
+  </div>
+
+</body>
+</html>

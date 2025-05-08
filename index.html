@@ -2,36 +2,22 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Студенческий Совет</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<div class="home"></div>
-<body class="no-scroll">
+<body>
+  <div class="home"></div>
   <header class="site-header">
     <nav>
       <ul>
-        <li><button onclick="window.open('about.html', '_blank')" class="button-about"></button></li>
-        <li><button onclick="window.open('members.html', '_blank')" class="button-members"></button></li>
-        <li><button onclick="window.open('goals.html', '_blank')" class="button-goals"></button></li>
-        <li><button onclick="window.open('stats.html', '_blank')" class="button-stats"></button></li>
-        <li><button onclick="window.open('contacts.html', '_blank')" class="button-contacts"></button></li>
+        <li><button onclick="window.location.href = 'about.html';" class="button-about"></button></li>
+        <li><button onclick="window.location.href = 'members.html';" class="button-members"></button></li>
+        <li><button onclick="window.location.href = 'goals.html';" class="button-goals"></button></li>
+        <li><button onclick="window.location.href = 'stats.html';" class="button-stats"></button></li>
+        <li><button onclick="window.location.href = 'contacts.html';" class="button-contacts"></button></li>
       </ul>
     </nav>
-
-    <div class="header-icons">
-      <a href="#" class="btn-telegram" target="_blank"></a>
-      <a href="#" class="btn-vk" target="_blank"></a>
-      <a href="#" class="btn-phone"></a>
-    </div>
   </header>
-
-  <main>
-    <section class="video-section">
-      <video width="100%" height="auto" autoplay muted loop playsinline>
-        <source src="videos/my-video.mp4" type="video/mp4">
-      </video>
-    </section>
-  </main>
 </body>
 </html>

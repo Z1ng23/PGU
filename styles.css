@@ -3,7 +3,7 @@
   -webkit-user-drag: none;
 }
 
-body {
+html, body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: #ffffff;
@@ -12,9 +12,19 @@ body {
   height: 100vh;
 }
 
-html {
-  overflow: hidden;
-  height: 100vh;
+.back-home {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-home img {
+  width: 40px;
+  height: 40px;
 }
 
 .home {
@@ -49,6 +59,141 @@ html {
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .contacts {
+    background-image: url("images/contacts-mobile.webp");
+  }
+}
+
+.members {
+  background: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  padding: 0;
+}
+
+.members img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+
+.about {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100vw;
+  min-height: 100vh;
+  overflow-y: auto;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  padding: 0;
+}
+
+.about {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100vw;
+  min-height: 100vh;
+  overflow-y: auto;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  padding: 0;
+}
+
+.about img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.video-container {
+  width: 30%;
+  margin: 0 auto;
+  padding-top: 320px;
+  z-index: 1;
+  margin-left: 20%;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.goals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;  /* Разрешаем прокрутку */
+  max-height: 100vh;  /* Ограничиваем высоту блока */
+}
+
+.goals img {
+  width: 100%; /* Изображение будет на всю ширину */
+  height: auto; /* Автоматическая высота */
+  max-height: none; /* Убираем ограничение по высоте для изображений */
+  object-fit: cover; 
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;     /* Разрешаем прокрутку */
+  max-height: 100vh;     /* Ограничиваем высоту блока */
+  background-image: url("images/stats.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stats img {
+  width: 100%;   
+  height: auto;
+  max-height: none;
+  object-fit: cover;
+}
+
+
 nav ul {
   list-style: none;
   display: flex;
@@ -76,31 +221,6 @@ section {
   background-repeat: no-repeat;
   min-height: 300px;
 }
-
-#about,
-#members,
-#goals,
-#stats {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-
-#about img,
-#members img,
-#goals img,
-#stats img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
 
 footer {
   text-align: center;
