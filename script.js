@@ -2,11 +2,11 @@ function isMobile() {
   return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = function () {
   const video = document.getElementById('introVideo');
   if (!video) return;
 
-  video.play().catch(err => console.warn("Ошибка запуска видео:", err));
+  video.play().catch(err => console.warn("Ошибка воспроизведения:", err));
 
   video.addEventListener('ended', () => {
     window.location.href = "intro.html";
@@ -15,4 +15,4 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => {
     window.location.href = "intro.html";
   }, 10000);
-});
+};
