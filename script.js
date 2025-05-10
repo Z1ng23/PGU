@@ -1,10 +1,15 @@
+function isLandscape() {
+  return window.screen.orientation
+    ? window.screen.orientation.type.startsWith("landscape")
+    : window.innerWidth > window.innerHeight;
+}
+
 function checkOrientation() {
-  // Используем медиазапрос — надёжнее
-  if (window.matchMedia("(orientation: landscape)").matches) {
-    setTimeout(() => {
+  setTimeout(() => {
+    if (isLandscape()) {
       window.location.href = "intro.html";
-    }, 500);
-  }
+    }
+  }, 300); // Ждём немного, чтобы ориентация точно обновилась
 }
 
 window.onload = checkOrientation;
