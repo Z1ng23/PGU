@@ -1,5 +1,6 @@
 function checkOrientation() {
-  if (window.innerWidth > window.innerHeight) {
+  // Используем медиазапрос — надёжнее
+  if (window.matchMedia("(orientation: landscape)").matches) {
     setTimeout(() => {
       window.location.href = "intro.html";
     }, 500);
