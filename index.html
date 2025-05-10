@@ -7,21 +7,10 @@
   <link rel="stylesheet" href="intro.css" />
 </head>
 <body>
-  <div id="intro">
-    <!-- Добавлен атрибут poster -->
-<video autoplay playsinline controls poster="fallback.jpg" style="width: 100%; height: auto;">
-  <source src="videos/rotate.mp4" type="video/mp4">
-  Ваш браузер не поддерживает видео.
-</video>
-
-  </div>
-
-  <script>
-    const video = document.getElementById('introVideo');
-    video.addEventListener('ended', () => {
-      window.location.href = "intro.html";
-    });
-  </script>
+  <video id="introVideo" autoplay muted playsinline poster="fallback.jpg">
+    <source src="videos/rotate.mp4" type="video/mp4" />
+    Ваш браузер не поддерживает видео.
+  </video>
 
   <script src="script.js"></script>
 </body>
