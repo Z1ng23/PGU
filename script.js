@@ -1,18 +1,11 @@
-function isMobile() {
-  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+function checkOrientation() {
+  // Если горизонтальная ориентация — переходим
+  if (window.innerWidth > window.innerHeight) {
+    setTimeout(() => {
+      window.location.href = "intro.html";
+    }, 500); // можно убрать задержку, если не нужна
+  }
 }
 
-window.onload = function () {
-  const video = document.getElementById('introVideo');
-  if (!video) return;
-
-  video.play().catch(err => console.warn("Ошибка воспроизведения:", err));
-
-  video.addEventListener('ended', () => {
-    window.location.href = "intro.html";
-  });
-
-  setTimeout(() => {
-    window.location.href = "intro.html";
-  }, 10000);
-};
+window.onload = checkOrientation;
+window.addEventListener('orientationchange', checkOrientation);
