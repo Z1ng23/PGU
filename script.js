@@ -1,16 +1,17 @@
 function isLandscape() {
-  return window.screen.orientation
-    ? window.screen.orientation.type.startsWith("landscape")
-    : window.innerWidth > window.innerHeight;
+  return window.innerWidth > window.innerHeight;
 }
 
 function checkOrientation() {
-  setTimeout(() => {
-    if (isLandscape()) {
+  if (isLandscape()) {
+    setTimeout(() => {
       window.location.href = "intro.html";
-    }
-  }, 300); // Ждём немного, чтобы ориентация точно обновилась
+    }, 300); // небольшая задержка на случай "дребезга"
+  }
 }
 
-window.onload = checkOrientation;
-window.addEventListener('orientationchange', checkOrientation);
+// Проверим при загрузке
+window.addEventListener('load', checkOrientation);
+
+// Проверим при любом изменении размеров (в Safari это работает!)
+window.addEventListener('resize', checkOrientation);
